@@ -17,7 +17,7 @@ function writeTrial(B)
         callName = "Oceananigans_Benchmark:" * date * ".csv"
 
         open(callName, "w") do io
-                write(io, "Model,GridType,GridSize,MinTime,MedianTime,MeanTime,MaxTime,Memory,Allocs,NumSamples")
+                write(io, "Model,GridType,GridSize,MinTime,MedianTime,MeanTime,MaxTime,Memory,Allocs,NumSamples\n")
                 for trialDict in B
                         t = trialDict["trial"]
 			trialInfo = trialDict["model"] * "," * trialDict["gridType"] * "," * trialDict["gridSize"][1] * "," * string(minimum(t.times)) * "," * string(median(t.times)) * "," * string(mean(t.times)) * "," * string(maximum(t.times)) * "," * string(t.memory) * "," * string(t.allocs) * "," * string(t.params.samples) * "\n"
