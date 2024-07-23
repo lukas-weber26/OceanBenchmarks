@@ -29,7 +29,7 @@ end
 
 #main code 
 completedBenchmarks = []
-for m in ["Hydrostatic", "Nonhydrostatic", "ShallowWater"]
+for m in ["Hydrostatic", "Nonhydrostatic", "ShallowWater","ShallowWaterConservative" ]
         for g in gridSizes
                 println("Starting Case ", string(g))
 
@@ -45,7 +45,11 @@ for m in ["Hydrostatic", "Nonhydrostatic", "ShallowWater"]
 
                 elseif (m == "ShallowWater")
                         grid = RectilinearGrid(size=g, x=(0, 2 * 3.14), y=(0, 2 * 3.14), topology=(Periodic, Periodic, Flat), halo=(3, 3))
-                        model = ShallowWaterModel(grid=grid, gravitational_acceleration=1.0)
+                        model = ShallowWaterModel(grid=grid, gravitational_acceleration=1.0, formulation=VectorInvariantFormulation())
+                        set!(model, h=1)
+                elseif (m == "ShallowWaterConservative")
+                        grid = RectilinearGrid(size=g, x=(0, 2 * 3.14), y=(0, 2 * 3.14), topology=(Periodic, Periodic, Flat), halo=(3, 3))
+                        model = ShallowWaterModel(grid=grid, gravitational_acceleration=1.0, formulation=ConservativeFormulation())
                         set!(model, h=1)
                 else
                         println("Invalid choice of model")
