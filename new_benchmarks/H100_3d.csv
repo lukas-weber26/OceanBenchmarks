@@ -1,0 +1,6 @@
+Model,GridType,GridSize,MinTime,MedianTime,MeanTime,MaxTime,Memory,Allocs,NumSamples
+Hydrostatic,RectilinearGrid,(,1.227474e6,1.2750885e6,1.4074816e6,2.30887e6,1289056,3929,10
+Hydrostatic,RectilinearGrid,(,1.384046e6,1.403549e6,1.5486622e6,2.71863e6,1289136,3934,10
+Hydrostatic,RectilinearGrid,(,1.253263e6,1.274818e6,1.4228111e6,2.597319e6,1289376,3935,10
+Hydrostatic,RectilinearGrid,(,1.309841e6,1.3391025e6,1.4434363e6,2.225559e6,1289136,3934,10
+Hydrostatic,RectilinearGrid,(,1.263807e6,1.280527e6,1.4095889e6,2.363032e6,1290160,4038,10

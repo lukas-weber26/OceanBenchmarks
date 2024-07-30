@@ -1,0 +1,7 @@
+This is a set of new bencharks intended to address the following questions: 
+-How does the A100 perform given a larger domain?
+-How does the H100 compare to the A100? Is the level of optimization similar?
+-Do three dimensional models work as well as two dimensional models? How do they scale?
+-How do the different shallow water models compare?
+
+Note that only the H100 and A100 were tested because the model size is too large for other platforms to be viable. Note that a 1600 * 1600 grid was tested but could not be run due to memory limitations.
