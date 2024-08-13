@@ -8,7 +8,7 @@ non_hydrostatic_a100 = data_a100[(data_a100["Model"] == "Nonhydrostatic")]
 shallow_water_a100 = data_a100[(data_a100["Model"] == "ShallowWater")]
 shallow_water_conservative_a100 = data_a100[(data_a100["Model"] == "ShallowWaterConservative")]
 
-data_h100 = pd.read_csv("./H100.csv", delimiter=",",index_col=None)
+data_h100 = pd.read_csv("../../Oceananigans_Benchmark:2024-08-13T18:48:46.040.csv", delimiter=",",index_col=None)
 hydrostatic_h100 = data_h100[(data_h100["Model"] == "Hydrostatic")]
 non_hydrostatic_h100 = data_h100[(data_h100["Model"] == "Nonhydrostatic")]
 shallow_water_h100 = data_h100[(data_h100["Model"] == "ShallowWater")]
